@@ -31,19 +31,26 @@ function SignPage() {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
 
-  const startCamera = async (type) => {
-    setActiveCamera(type);
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      if (videoRef.current) videoRef.current.srcObject = stream;
-    } catch (err) {
-      toast.error(" لم يتم فتح الكاميرا: " + err.message, {
-        position: "top-right",
-        autoClose: 3000,
-      });
-    }
-  };
+const startCamera = async (type) => {
+  setActiveCamera(type);
+  try {
+    let constraints = { video: true };
 
+    if (type === "selfie") {
+      constraints = { video: { facingMode: "user" } }; // front camera
+    } else if (type === "idCard") {
+      constraints = { video: { facingMode: { exact: "environment" } } }; // back camera
+    }
+
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    if (videoRef.current) videoRef.current.srcObject = stream;
+  } catch (err) {
+    toast.error(" لم يتم فتح الكاميرا: " + err.message, {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  }
+};
   const capturePhoto = () => {
     if (!videoRef.current || !canvasRef.current) return;
     const ctx = canvasRef.current.getContext("2d");
