@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Mowathaq/static/css/main.33c8aafc.css",
-    "main.js": "/Mowathaq/static/js/main.ab182a48.js",
+    "main.js": "/Mowathaq/static/js/main.724a171e.js",
     "static/js/453.c2ea0d57.chunk.js": "/Mowathaq/static/js/453.c2ea0d57.chunk.js",
     "static/media/logo3.png": "/Mowathaq/static/media/logo3.70537460d2edb26fec11.png",
     "index.html": "/Mowathaq/index.html",
     "main.33c8aafc.css.map": "/Mowathaq/static/css/main.33c8aafc.css.map",
-    "main.ab182a48.js.map": "/Mowathaq/static/js/main.ab182a48.js.map",
+    "main.724a171e.js.map": "/Mowathaq/static/js/main.724a171e.js.map",
     "453.c2ea0d57.chunk.js.map": "/Mowathaq/static/js/453.c2ea0d57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33c8aafc.css",
-    "static/js/main.ab182a48.js"
+    "static/js/main.724a171e.js"
   ]
 }
