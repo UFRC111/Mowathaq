@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import SearchPage from "./SearchPage";
 import SignPage from "./SignPage";
 import TipsPage from "./Tips";
+
 function App() {
   return (
     <Router>
