@@ -37,9 +37,9 @@ const startCamera = async (type) => {
     let constraints = { video: true };
 
     if (type === "selfie") {
-      constraints = { video: { facingMode: "user" } }; // front camera
+      constraints = { video: { facingMode: "user" } }; // Front camera
     } else if (type === "idCard") {
-      constraints = { video: { facingMode: { exact: "environment" } } }; // back camera
+      constraints = { video: { facingMode: "environment" } }; // Back camera
     }
 
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -51,6 +51,7 @@ const startCamera = async (type) => {
     });
   }
 };
+
   const capturePhoto = () => {
     if (!videoRef.current || !canvasRef.current) return;
     const ctx = canvasRef.current.getContext("2d");
